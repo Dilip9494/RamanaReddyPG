@@ -915,10 +915,12 @@ button {
 .page-header::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 100;
-  width: 100%;
+  bottom: 10px; /* a bit above the bottom, under the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;           /* length of the line */
   height: 4px;
+  border-radius: 999px;
   background: linear-gradient(90deg, #ff7eb3, #ff9a62, #fbbf24, #34d399, #60a5fa, #a78bfa, #ff7eb3);
   background-size: 200% 100%;
   animation: headerGradientMove 4s ease-in-out infinite;
@@ -928,6 +930,7 @@ button {
   0%, 100% { background-position: 0% center; }
   50% { background-position: 200% center; }
 }
+
 
 /* Adjust text colors for better contrast */
 .page-header h1,
